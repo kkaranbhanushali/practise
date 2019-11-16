@@ -18,15 +18,21 @@ def withdraw(amount):
       lt = -amount
 
 def statement():
+  global balance
+  global lt
   print("Balance =",balance)
   print("Last Transaction =",lt)
 
 
-deposit(50)
+amount = int(input("Please enter the value to be Deposited"))
+
+deposit(amount)
 statement()
 
-deposit(100)
+amount = int(input("Please enter the value to be Deposited"))
+deposit(amount)
 statement()
 
-withdraw(70)
+amount = int(input("Please enter the value to be Withdrawn"))
+withdraw(amount)
 statement()
