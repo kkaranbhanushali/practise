@@ -1,10 +1,7 @@
 print("Welcome to PiggyBank")
 
 balance = 0
-print("Balance =",balance)
-
 lt = 0
-print("Last Transaction =",balance)
 
 def deposit(amount):
   global balance
@@ -20,14 +17,16 @@ def withdraw(amount):
       balance = balance - amount
       lt = -amount
 
+def statement():
+  print("Balance =",balance)
+  print("Last Transaction =",lt)
+
 
 deposit(50)
-deposit(100)
+statement()
 
-print("Balance =",balance)
-print("Last Transaction =",lt)
+deposit(100)
+statement()
 
 withdraw(70)
-
-print("Balance =",balance)
-print("Last Transaction =",lt)
+statement()
